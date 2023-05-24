@@ -15,9 +15,9 @@
     <div class="core-container p-3">
         <div id="header" class="d-flex">
             <button id="bFirst" class="btn btn-primary me-1 mb-1">first</button>
-            <button id="bLast" class="btn btn-primary me-1 mb-1">last</button>
             <input id="iGoto" class="form-control me-1 mb-1" placeholder="Element number">
-            <button id="goto" class="btn btn-primary mb-1">Goto</button>
+            <button id="goto" class="btn btn-primary me-1 mb-1">Goto</button>
+            <button id="bLast" class="btn btn-primary me-1 mb-1">last</button>
         </div>
         <div id="body">
 
@@ -26,11 +26,10 @@
 
     <script>
         $(document).ready(function () {
-            let filler = new StringSeeder();
-            filler.init();
-
+            let seeder = new StringSeeder();
             let elementId = 1;
-            filler.get().forEach((s) => {
+
+            seeder.init().get().forEach((s) => {
                 $('#body').append('<div class="m-1 rounded text-bg-light p-2 scrollElement' + elementId + '">' + elementId + '. ' + s + '</div>');
                 elementId ++;
             });

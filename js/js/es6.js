@@ -19,6 +19,8 @@ class StringSeeder {
         }
 
         this.wait(1000);
+
+        return this;
     }
 
     get() {

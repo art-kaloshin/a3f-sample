@@ -1,0 +1,28 @@
+.core-container {
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+#body {
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    flex-direction: row;
+}
+
+#header input {
+    flex-grow: 1;
+}
+
+#header button {
+    flex-grow: 0;
+}
+
+@media screen and (max-width: 575px) {
+    #header {
+        flex-direction: column;
+    }
+}
